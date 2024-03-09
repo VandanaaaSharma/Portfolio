@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="logo">Vandana</div>
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- <span class="vandana-text">Vandana</span> -->
+        </div>
+    </div>
+    <div class="content" id="home">
+        <div class="intro">
+            <h2>Hi! I'm <span class="abc">Vandana</span></h2>
+            <h3>I'm Web Developer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>elit. Ipsum optio consequatur id. Sint, facilis
+                quas!!<br>ex fugit facere sequi mollitia impedit quisquam??<br> Corrupti velit optio nostrum quisquam
+                ut!</p>
+            <a href="path_to_cv.pdf" class="download-btn">Download CV</a>
+            <a href="abc" class="talk">Let's Talk</a>
+
+        </div>
+    </div>
+    <div class="about-content" id="about">
+        <h2>About Me</h2>
+        <div class="about-flex-container">
+            <div class="circle-image">
+                <img src="vandana.jpeg" alt="Circle Image">
+            </div>
+            <div class="about-text">
+                <p>This is where you can add detailed information about yourself, your skills, experiences, and more.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin sit amet semper mi.
+                    Sed laoreet justo ac lectus hendrerit, in pulvinar ligula viverra. Curabitur fermentum urna eu risus
+                    tristique, vel gravida est luctus. Duis in ante a justo varius dapibus. Sed nec libero vel ex
+                    vestibulum tincidunt. Quisque vestibulum justo at urna dictum, nec feugiat leo euismod. Nunc
+                    volutpat ligula a interdum venenatis. Integer ac dolor eu augue vestibulum dictum. Vestibulum in
+                    erat vel ex cursus consectetur et vel justo. Integer posuere nulla vel metus luctus, vel vulputate
+                    dolor malesuada.</p>
+            </div>
+
+        </div>
+        <div class="projects" id="projects">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="project-box" id="project1">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
+                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
+                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
+                </div>
+                <div class="project-box" id="project2">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
+                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
+                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
+                </div>
+                <div class="project-box" id="project3">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
+                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
+                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
+                </div>
+            </div>
+        </div>
+        <div class="services" id="services">
+            <h2>Services</h2>
+            <div class="service-container">
+                <div class="service-box1" id="services1">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
+                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
+                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
+                </div>
+                <div class="service-box2" id="services2">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
+                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
+                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
+                </div>
+                <div class="service-box3" id="services3">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
+                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
+                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contact" id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm" action="#" method="post">
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" required>
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="yourMessage">Your Message</label>
+                    <textarea id="yourMessage" name="yourMessage" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+        <footer>
+            <p>Copyright © 2024 by Vandana | All Rights Reserved.<br>
+            <a href="mailto:vandanasharmajewar007@gmail.com">vandanasharmajewar007@gmail.com</a></p>
+          </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
