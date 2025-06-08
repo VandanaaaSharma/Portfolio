@@ -225,6 +225,26 @@
         <img src="vandana.jpg" alt="Vandana">
       </div>
     </div>
+     <!-- Projects Section -->
+    <div class="projects" id="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <h3>Weather Forecasting App</h3>
+          <p>Created using HTML, CSS, and JavaScript, this app fetches weather data from an open API. It shows temperature, humidity, and conditions. Designed for responsiveness and smooth UI across screen sizes.</p>
+    </div>
+        <div class="project-card">
+          <h3>Flight Scheduler</h3>
+          <p>A Spring Boot-based flight search app that fetches real-time data via APIs. Users can select routes and dates. Java, REST APIs, and MySQL were used to handle backend, validation, and error management.</p>
+    </div>
+        <div class="project-card">
+          <h3>Hindi HTR System</h3>
+          <p>This project uses VGG16 with CTC loss to recognize handwritten Hindi words. It preprocesses word images and outputs predictions. Built using TensorFlow and Python with a custom-trained model for accuracy.</p>
+    
+        </div>
+      </div>
+    </div>
+
 
     <!-- Services Section -->
     <div class="services" id="services">
@@ -233,42 +253,52 @@
         <div class="service-box">
           <h3>Web Developer</h3>
           <p>I design responsive websites using HTML, CSS, JavaScript, and ReactJS. I also integrate robust backends with Spring Boot and manage relational databases like MySQL for end-to-end web application development.</p>
-        </div>
+    </div>
         <div class="service-box">
           <h3>Java Developer</h3>
           <p>I’ve been practicing Java regularly and strengthening my programming foundation through DSA. With solid object-oriented principles, I write clean, optimized code and develop scalable logic for backend systems.</p>
         </div>
         <div class="service-box">
-          <h3>ML Practitioner</h3>
+          <h3>Machine Learning</h3>
           <p>Worked on machine learning models using real datasets. Built a Hindi handwritten recognition model using VGG16 and CTC loss. I enjoy combining Python with libraries like Pandas, NumPy, and TensorFlow.</p>
         </div>
       </div>
     </div>
 
-    <!-- Projects Section -->
-    <div class="projects" id="projects">
-      <h2 class="section-title">My Projects</h2>
-      <div class="project-container">
-        <div class="project-card">
-          <h3>Kitabwalah Marketplace</h3>
-          <p>A full-stack platform for buyers and vendors with role-based access, Spring Boot backend, React frontend, and mobile support.</p>
-        </div>
-        <div class="project-card">
-          <h3>Airplane Scheduler</h3>
-          <p>A flight scheduling app that integrates Spring Boot with live flight APIs and login/auth with Spring Security.</p>
-        </div>
-        <div class="project-card">
-          <h3>Hindi Handwritten Recognition</h3>
-          <p>CRNN + CTC-based model recognizing Hindi handwritten words. Achieved over 90% accuracy with beam decoding.</p>
-        </div>
-      </div>
-    </div>
-
+   
     <!-- Footer -->
-    <footer>
-      &copy; 2025 Vandana. All rights reserved.
-    </footer>
-  </div>
+    <div class="contact" id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm" action="#" method="post">
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" required>
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="yourMessage">Your Message</label>
+                    <textarea id="yourMessage" name="yourMessage" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+        <footer>
+            <p>Copyright © 2024 by Vandana | All Rights Reserved.<br>
+            <a href="mailto:vandanasharmajewar007@gmail.com">vandanasharmajewar007@gmail.com</a></p>
+          </footer>
+
+        <script src="script.js"></script>
 </body>
 
 </html>
