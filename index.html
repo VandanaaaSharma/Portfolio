@@ -1,131 +1,230 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vandana | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    nav {
+      background: #333;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 10px 20px;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 5px 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: pink;
+    }
+    .logo {
+      font-size: 1.5rem;
+      color: pink;
+      font-weight: bold;
+    }
+    .hero-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      color: #764ba2;
+      font-size: 2rem;
+    }
+    .projects ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .projects li {
+      background: #f1f1f1;
+      list-style: none;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      flex: 1 1 280px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+    .projects li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea, button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #764ba2;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #5a3a9c;
+    }
+    footer {
+      text-align: center;
+      background-color: #2f3337;
+      color: white;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: pink;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .projects ul {
+        flex-direction: column;
+      }
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      .hero-section h2 {
+        font-size: 1.4rem;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="menu">
-            <div class="logo">Vandana</div>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <nav>
+    <ul>
+      <li><span class="logo">Vandana</span></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <!-- <span class="vandana-text">Vandana</span> -->
-        </div>
+  <header id="home">
+    <div class="hero-section">
+      <img src="vandana.jpg" alt="Vandana" class="profile-pic">
+      <h1>Hi! I'm Vandana</h1>
+      <h2>I'm a Web Developer</h2>
+      <p>I specialize in full-stack development and enjoy creating clean, user-focused web applications.</p>
+      <div>
+        <a href="Vandana.pdf" download class="btn">Download CV</a>
+        <a href="#contact" class="btn">Let's Talk</a>
+      </div>
     </div>
-    <div class="content" id="home">
-        <div class="intro">
-            <h2>Hi! I'm <span class="abc">Vandana</span></h2>
-            <h3>I'm Web Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>elit. Ipsum optio consequatur id. Sint, facilis
-                quas!!<br>ex fugit facere sequi mollitia impedit quisquam??<br> Corrupti velit optio nostrum quisquam
-                ut!</p>
-            <a href="path_to_cv.pdf" class="download-btn">Download CV</a>
-            <a href="abc" class="talk">Let's Talk</a>
+  </header>
 
-        </div>
-    </div>
-    <div class="about-content" id="about">
-        <h2>About Me</h2>
-        <div class="about-flex-container">
-            <div class="circle-image">
-                <img src="vandana.jpeg" alt="Circle Image">
-            </div>
-            <div class="about-text">
-                <p>I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using Spring Boot and MySQL. I interned at SCSIT, NIET where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with elegant code.</p>
- </p>
-            </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using Spring Boot and MySQL. I interned at SCSIT, NIET where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with elegant code.</p>
+  </section>
 
-        </div>
-        <div class="projects" id="projects">
-            <h2>Projects</h2>
-            <div class="project-container">
-                <div class="project-box" id="project1">
-                    <h3>Web Developer</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
-                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
-                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
-                </div>
-                <div class="project-box" id="project2">
-                    <h3>Flight Scheduler</h3>
-                    <p>A Spring Boot application that fetches real-time flight data using external APIs. I developed a complete flight search engine that allows users to find available flights by selecting origin, destination, and travel date. It includes error handling, input validation, and response parsing for a seamless user experience. Backend services were built in Java with REST APIs, while database operations used MySQL. </p>
-                </div>
-                <div class="project-box" id="project3">
-                    <h3>Web Developer</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
-                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
-                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
-                </div>
-            </div>
-        </div>
-        <div class="services" id="services">
-            <h2>Services</h2>
-            <div class="service-container">
-                <div class="service-box1" id="services1">
-                    <h3>Web Developer</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
-                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
-                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
-                </div>
-                <div class="service-box2" id="services2">
-                    <h3>Web Developer</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
-                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
-                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
-                </div>
-                <div class="service-box3" id="services3">
-                    <h3>Web Developer</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum totam voluptatibus nam nihil.
-                        Quia consectetur dolorem atque cupiditate, incidunt recusandae doloribus necessitatibus libero
-                        expedita voluptatibus repellendus tempora debitis voluptatem dolore!</p>
-                </div>
-            </div>
-        </div>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Flight Scheduler:</strong><br>A Spring Boot application that fetches real-time flight data using external APIs. Users select routes and dates. It features robust error handling and uses MySQL. <a href="https://github.com/VandanaaaSharma/scheduler-main.git">[GitHub]</a></li>
+      <li><strong>Hindi HTR System:</strong><br>Built using VGG16 and CTC, this recognizes handwritten Hindi words with accuracy. Preprocessing, training, and prediction are all done using Python and TensorFlow.</li>
+      <li><strong>Weather Forecast App:</strong><br>A responsive app made using HTML, CSS, and JS. It fetches weather data from an open API and displays temperature, humidity, and conditions neatly.</li>
+    </ul>
+  </section>
 
+  <section id="services">
+    <h2>Services & Skills</h2>
+    <ul>
+      <li>Frontend: HTML, CSS, JavaScript, ReactJS</li>
+      <li>Backend: Java, Spring Boot</li>
+      <li>Databases: MySQL, PostgreSQL</li>
+      <li>Machine Learning: Python, TensorFlow, Scikit-learn</li>
+      <li>Tools: VSCode, Git, NetBeans, Google Colab</li>
+    </ul>
+  </section>
 
-        <div class="contact" id="contact">
-            <h2>Contact</h2>
-            <form id="contactForm" action="#" method="post">
-                <div>
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="mobileNumber">Mobile Number</label>
-                    <input type="tel" id="mobileNumber" name="mobileNumber" required>
-                </div>
-                <div>
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div>
-                    <label for="yourMessage">Your Message</label>
-                    <textarea id="yourMessage" name="yourMessage" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </div>
-        <footer>
-            <p>Copyright © 2024 by Vandana | All Rights Reserved.<br>
-            <a href="mailto:vandanasharmajewar007@gmail.com">vandanasharmajewar007@gmail.com</a></p>
-          </footer>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-        <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Vandana. All rights reserved. <br><a href="mailto:vandanasharmajewar007@gmail.com">vandanasharmajewar007@gmail.com</a></p>
+  </footer>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for reaching out! I will get back to you soon.");
+    });
+  </script>
 </body>
-
 </html>
