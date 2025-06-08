@@ -5,7 +5,7 @@ function toggleContent(contentId) {
     } else {
       content.style.display = 'none';
     }
-  }
+}
   
   // Adding event listener to the About link
   var aboutLink = document.getElementById('aboutLink');
