@@ -129,8 +129,8 @@
     }
 
     .service-box {
-      background-color: #1a1a1a;
-      color: white;
+       background-color: white;
+      color: black;
       border: 2px solid #ff4d4d;
       padding: 25px;
       border-radius: 15px;
@@ -274,8 +274,9 @@
       <div class="logo">Vandana</div>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -291,12 +292,16 @@
       </div>
     </div>
     <!-- About Section -->
-<div id="about">
-  <h2 class="section-title">About Me</h2>
-  <div class="about-content">
-    <p>I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using Spring Boot and MySQL. I interned at SCSIT, NIET where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with elegant code.</p>
+<!-- About Section -->
+<div id="about" style="background-color: #1a1a1a; padding: 60px 20px; border-top: 2px solid #ff4d4d; border-bottom: 2px solid #ff4d4d; text-align: center;">
+  <h2 style="font-size: 36px; color: #ff4d4d; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">About Me</h2>
+  <div style="max-width: 800px; margin: auto; font-size: 1.1em; line-height: 1.8; color: #e0e0e0;">
+    <p style="padding: 0 10px;">
+      I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using <span style="color: #ff4d4d; font-weight: bold;">Spring Boot</span> and <span style="color: #ff4d4d; font-weight: bold;">MySQL</span>. I interned at <span style="color: #ff4d4d;">SCSIT, NIET</span> where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with <span style="font-style: italic; color: #ff4d4d;">elegant code</span>.
+    </p>
   </div>
 </div>
+
 
 
     <!-- Projects Section -->
@@ -305,15 +310,15 @@
       <div class="project-container">
         <div class="project-card">
           <h3>Weather Forecasting App</h3>
-          <p>Created using HTML, CSS, and JavaScript, this app fetches weather data from an open API.</p>
+          <p>Created using HTML, CSS, and JavaScript, this app fetches weather data from an open API. It shows temperature, humidity, and conditions. Designed for responsiveness and smooth UI across screen sizes
         </div>
         <div class="project-card">
           <h3>Flight Scheduler</h3>
-          <p>A Spring Boot-based flight search app with Java, REST APIs, and MySQL for backend functionality.</p>
+          <p>A Spring Boot-based flight search app that fetches real-time data via APIs. Users can select routes and dates. Java, REST APIs, and MySQL were used to handle backend, validation, and error management.</p>
         </div>
         <div class="project-card">
           <h3>Hindi HTR System</h3>
-          <p>This project uses VGG16 with CTC loss to recognize handwritten Hindi words using TensorFlow.</p>
+          <p>This project uses VGG16 with CTC loss to recognize handwritten Hindi words. It preprocesses word images and outputs predictions. Built using TensorFlow and Python with a custom-trained model for accuracy.</p>
         </div>
       </div>
     </div>
@@ -324,15 +329,15 @@
       <div class="service-container">
         <div class="service-box">
           <h3>Web Developer</h3>
-          <p>I design responsive websites using HTML, CSS, JavaScript, ReactJS, Spring Boot, and MySQL.</p>
+          <p>I design responsive websites using HTML, CSS, JavaScript, and ReactJS. I also integrate robust backends with Spring Boot and manage relational databases like MySQL for end-to-end web application development.</p>
         </div>
         <div class="service-box">
           <h3>Java Developer</h3>
-          <p>Practicing Java & DSA regularly, I write clean, optimized code using object-oriented principles.</p>
+          <p>I’ve been practicing Java regularly and strengthening my programming foundation through DSA. With solid object-oriented principles, I write clean, optimized code and develop scalable logic for backend systems.</p>
         </div>
         <div class="service-box">
           <h3>Machine Learning</h3>
-          <p>Worked on ML models using real datasets, especially VGG16+CTC for handwritten text recognition.</p>
+          <p>Worked on machine learning models using real datasets. Built a Hindi handwritten recognition model using VGG16 and CTC loss. I enjoy combining Python with libraries like Pandas, NumPy, and TensorFlow.</p>
         </div>
       </div>
     </div>
