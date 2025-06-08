@@ -2,263 +2,179 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vandana | Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vandana | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-    }
+        body {
+            background-color: #0d0d0d;
+            color: white;
+        }
 
-    nav {
-      background: #1a1a1a;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
 
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      padding: 10px 20px;
-      margin: 0;
-      flex-wrap: wrap;
-    }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ff4d4d;
+        }
 
-    nav li {
-      margin: 5px 10px;
-    }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ff4d4d;
+        }
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
 
-    nav a:hover {
-      color: #ff4d4d;
-    }
+        ul li {
+            margin-left: 20px;
+        }
 
-    .logo {
-      font-size: 1.8rem;
-      color: #ff4d4d;
-      font-weight: bold;
-    }
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    .hero-section {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #1a1a1a, #330000);
-      color: white;
-      animation: fadeInUp 1.5s ease-in-out;
-    }
+        ul li a:hover {
+            color: #ff4d4d;
+        }
 
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid #ff4d4d;
-    }
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 60px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        .hero-content {
+            flex: 1;
+        }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+        .hero-content h1 {
+            font-size: 3em;
+            color: #ff4d4d;
+        }
 
-    section h2 {
-      text-align: center;
-      color: #ff4d4d;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-    }
+        .hero-content p {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #e6e6e6;
+        }
 
-    .projects ul, .services ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 0;
-      margin: 0;
-    }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
 
-    .projects li, .services li {
-      background: #1f1f1f;
-      list-style: none;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 300px;
-      flex: 1 1 280px;
-      box-shadow: 0 4px 8px rgba(255, 77, 77, 0.1);
-      transition: 0.3s;
-      border: 1px solid #ff4d4d;
-    }
+        .hero-image img {
+            width: 300px;
+            border: 5px solid #ff4d4d;
+            border-radius: 50%;
+        }
 
-    .projects li:hover, .services li:hover {
-      background-color: #ff4d4d;
-      color: #000;
-      transform: translateY(-5px);
-    }
+        .projects {
+            margin-top: 80px;
+        }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 600px;
-      margin: auto;
-    }
+        .projects h2 {
+            color: #ff4d4d;
+            margin-bottom: 20px;
+        }
 
-    input, textarea, button {
-      padding: 12px;
-      border-radius: 5px;
-      border: 1px solid #444;
-      font-size: 1rem;
-      background-color: #1a1a1a;
-      color: white;
-    }
+        .project-card {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border: 2px solid #ff4d4d;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-    button {
-      background-color: #ff4d4d;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px #ff4d4d;
+        }
 
-    button:hover {
-      background-color: #b30000;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #121212;
-      color: white;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #ff4d4d;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media screen and (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .projects ul, .services ul {
-        flex-direction: column;
-      }
-
-      .hero-section h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero-section h2 {
-        font-size: 1.4rem;
-      }
-    }
-  </style>
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ff4d4d;
+            color: #999;
+        }
+    </style>
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><span class="logo">Vandana</span></li>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <div class="container">
+        <div class="menu">
+            <div class="logo">Vandana</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
 
-  <header id="home">
-    <div class="hero-section">
-      <img src="vandana.jpg" alt="Vandana" class="profile-pic">
-      <h1>Hi! I'm Vandana</h1>
-      <h2>I'm a Web Developer</h2>
-      <p>I specialize in full-stack development and enjoy creating clean, user-focused web applications.</p>
-      <div>
-        <a href="Vandana.pdf" download><button>Download CV</button></a>
-        <a href="#contact"><button>Let's Talk</button></a>
-      </div>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Hello, I'm Vandana</h1>
+                <p>A passionate Web Developer who loves turning ideas into beautiful and functional websites.</p>
+            </div>
+            <div class="hero-image">
+                <img src="vandana.jpg" alt="Vandana">
+            </div>
+        </div>
+
+        <div class="projects">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Description of project 1 goes here. Built using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Description of project 2 goes here. Built using React and Firebase.</p>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2025 Vandana. All rights reserved.
+        </footer>
     </div>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using Spring Boot and MySQL. I interned at SCSIT, NIET where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with elegant code.</p>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Flight Scheduler:</strong><br>A Spring Boot application that fetches real-time flight data using external APIs. Users select routes and dates. It features robust error handling and uses MySQL. <a href="https://github.com/VandanaaaSharma/scheduler-main.git">[GitHub]</a></li>
-      <li><strong>Hindi HTR System:</strong><br>Built using VGG16 and CTC, this recognizes handwritten Hindi words with accuracy. Preprocessing, training, and prediction are all done using Python and TensorFlow.</li>
-      <li><strong>Weather Forecast App:</strong><br>A responsive app made using HTML, CSS, and JS. It fetches weather data from an open API and displays temperature, humidity, and conditions neatly.</li>
-    </ul>
-  </section>
-
-  <section id="services" class="services">
-    <h2>Services & Skills</h2>
-    <ul>
-      <li>Frontend: HTML, CSS, JavaScript, ReactJS</li>
-      <li>Backend: Java, Spring Boot</li>
-      <li>Databases: MySQL, PostgreSQL</li>
-      <li>Machine Learning: Python, TensorFlow, Scikit-learn</li>
-      <li>Tools: VSCode, Git, NetBeans, Google Colab</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Vandana. All rights reserved. <br><a href="mailto:vandanasharmajewar007@gmail.com">vandanasharmajewar007@gmail.com</a></p>
-  </footer>
-
-  <script>
-    document.querySelector("form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thank you for reaching out! I will get back to you soon.");
-    });
-  </script>
 </body>
 
 </html>
