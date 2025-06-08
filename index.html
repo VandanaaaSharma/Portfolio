@@ -1,11 +1,12 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vandana | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
     .hero-section {
       animation: fadeInUp 1.5s ease-in-out;
     }
@@ -20,7 +21,7 @@
       }
     }
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: bold;
       padding: 10px 20px;
       color: #764ba2;
@@ -51,117 +52,103 @@
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .projects ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      section {
+        padding: 20px 15px;
+      }
+      .btn {
+        margin: 5px auto;
+        width: 90%;
+        display: block;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="menu">
-            <div class="logo">Vandana</div>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <header id="home">
+    <div class="hero-section">
+      <img src="vandana.jpg" alt="Vandana" class="profile-pic">
+      <h1>Hi! I'm Vandana</h1>
+      <h2>I'm a Web Developer</h2>
+      <p>I specialize in full-stack development and enjoy creating clean, user-focused web applications.</p>
+      <div class="buttons">
+        <a href="Vandana.pdf" download class="btn">Download CV</a>
+        <a href="#contact" class="btn">Let's Talk</a>
+      </div>
+    </div>
+  </header>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <!-- <span class="vandana-text">Vandana</span> -->
-        </div>
-    </div>
-    <div class="content" id="home">
-        <div class="intro">
-            <h2>Hi! I'm <span class="abc">Vandana</span></h2>
-            <h3>I'm Web Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>elit. Ipsum optio consequatur id. Sint, facilis
-                quas!!<br>ex fugit facere sequi mollitia impedit quisquam??<br> Corrupti velit optio nostrum quisquam
-                ut!</p>
-            <a href="path_to_cv.pdf" class="download-btn">Download CV</a>
-            <a href="abc" class="talk">Let's Talk</a>
+  <nav>
+    <ul>
+      <li><a href="#home"><span class="logo">Vandana</span></a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-        </div>
-    </div>
-    <div class="about-content" id="about">
-        <h2>About Me</h2>
-        <div class="about-flex-container">
-            <div class="circle-image">
-                <img src="vandana.jpeg" alt="Circle Image">
-            </div>
-            <div class="about-text">
-                <p>I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using Spring Boot and MySQL. I interned at SCSIT, NIET where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with elegant code.</p>
- </p>
-            </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using Spring Boot and MySQL. I interned at SCSIT, NIET where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with elegant code.</p>
+  </section>
 
-        </div>
-        <div class="projects" id="projects">
-            <h2>Projects</h2>
-  <div class="project-container">
-    <div class="project-box" id="project1">
-      <h3>Flight Scheduler</h3>
-      <p>A Spring Boot-based flight search app that fetches real-time data via APIs. Users can select routes and dates. Java, REST APIs, and MySQL were used to handle backend, validation, and error management.</p>
-    </div>
-    <div class="project-box" id="project2">
-      <h3>Hindi HTR System</h3>
-      <p>This project uses VGG16 with CTC loss to recognize handwritten Hindi words. It preprocesses word images and outputs predictions. Built using TensorFlow and Python with a custom-trained model for accuracy.</p>
-    </div>
-    <div class="project-box" id="project3">
-      <h3>Weather Forecasting App</h3>
-      <p>Created using HTML, CSS, and JavaScript, this app fetches weather data from an open API. It shows temperature, humidity, and conditions. Designed for responsiveness and smooth UI across screen sizes.</p>
-    </div>
-  </div>
-</div>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Flight Scheduler:</strong><br>A Spring Boot application that fetches real-time flight data using external APIs. I developed a complete flight search engine that allows users to find available flights by selecting origin, destination, and travel date. It includes error handling, input validation, and response parsing for a seamless user experience. Backend services were built in Java with REST APIs, while database operations used MySQL. <a href="https://github.com/VandanaaaSharma/scheduler-main.git">[GitHub]</a></li>
+      <li><strong>Amazon Clone:</strong><br>A responsive front-end e-commerce site with cart and checkout using HTML, CSS, and JS. <a href="https://github.com/VandanaaaSharma/Amazon-clone.git">[GitHub]</a></li>
+      <li><strong>Recommendation System:</strong><br>A Streamlit app for personalized movie recommendations using TMDb dataset. <a href="https://github.com/VandanaaaSharma/Recommendation-System.git">[GitHub]</a></li>
+    </ul>
+  </section>
 
-        <div class="services" id="services">
-  <h2>Services</h2>
-  <div class="service-container">
-    <div class="service-box1" id="services1">
-      <h3>Web Developer</h3>
-      <p>I design responsive websites using HTML, CSS, JavaScript, and ReactJS. I also integrate robust backends with Spring Boot and manage relational databases like MySQL for end-to-end web application development.</p>
-    </div>
-    <div class="service-box2" id="services2">
-      <h3>Java Developer</h3>
-      <p>I’ve been practicing Java regularly and strengthening my programming foundation through DSA. With solid object-oriented principles, I write clean, optimized code and develop scalable logic for backend systems.</p>
-    </div>
-    <div class="service-box3" id="services3">
-      <h3>Machine Learning</h3>
-      <p>Worked on machine learning models using real datasets. Built a Hindi handwritten recognition model using VGG16 and CTC loss. I enjoy combining Python with libraries like Pandas, NumPy, and TensorFlow.</p>
-    </div>
-  </div>
-</div>
+  <section id="services">
+    <h2>Services & Skills</h2>
+    <ul>
+      <li>Frontend Development: HTML, CSS, JavaScript, React</li>
+      <li>Backend Development: Java, Spring Boot</li>
+      <li>Database Management: MySQL, SQL</li>
+      <li>Data Science Tools: Python, Pandas, NumPy, Scikit-learn</li>
+      <li>Tools & Platforms: VSCode, Google Colab, GitHub, NetBeans</li>
+    </ul>
+  </section>
 
-        <div class="contact" id="contact">
-            <h2>Contact</h2>
-            <form id="contactForm" action="#" method="post">
-                <div>
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="mobileNumber">Mobile Number</label>
-                    <input type="tel" id="mobileNumber" name="mobileNumber" required>
-                </div>
-                <div>
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div>
-                    <label for="yourMessage">Your Message</label>
-                    <textarea id="yourMessage" name="yourMessage" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </div>
-        <footer>
-            <p>Copyright © 2024 by Vandana | All Rights Reserved.<br>
-            <a href="mailto:vandanasharmajewar007@gmail.com">vandanasharmajewar007@gmail.com</a></p>
-          </footer>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-        <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Vandana. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
