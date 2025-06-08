@@ -117,7 +117,7 @@
     }
 
     /* Services Section */
-    .services {
+    #services {
       padding-bottom: 60px;
     }
 
@@ -129,8 +129,8 @@
     }
 
     .service-box {
-      background-color: white;
-      color: black;
+      background-color: #1a1a1a;
+      color: white;
       border: 2px solid #ff4d4d;
       padding: 25px;
       border-radius: 15px;
@@ -156,7 +156,7 @@
     }
 
     /* Projects Section */
-    .projects {
+    #projects {
       padding-bottom: 60px;
     }
 
@@ -192,69 +192,77 @@
       box-shadow: 0 0 15px #ff4d4d;
     }
 
-    /* Contact Form Styling */
+    /* Contact Section */
     .contact {
-      margin-top: 60px;
-      padding: 40px;
       background-color: #1a1a1a;
-      border: 2px solid #ff4d4d;
-      border-radius: 15px;
+      padding: 40px 20px;
+      border-top: 2px solid #ff4d4d;
+      margin-top: 60px;
     }
 
     .contact h2 {
-      text-align: center;
-      font-size: 2em;
       color: #ff4d4d;
+      text-align: center;
       margin-bottom: 30px;
+      font-size: 30px;
     }
 
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      max-width: 600px;
+      margin: auto;
     }
 
-    form label {
-      font-weight: 500;
-      color: #fff;
+    form div {
+      margin-bottom: 15px;
     }
 
-    form input,
-    form textarea {
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: white;
+    }
+
+    input,
+    textarea {
+      width: 100%;
       padding: 10px;
-      border-radius: 8px;
+      border-radius: 5px;
       border: 1px solid #ff4d4d;
       background-color: #0d0d0d;
       color: white;
-      resize: none;
     }
 
     .submit-btn {
-      padding: 12px;
       background-color: #ff4d4d;
       color: white;
+      padding: 10px 20px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      font-weight: bold;
       transition: background-color 0.3s;
     }
 
     .submit-btn:hover {
-      background-color: #e60000;
+      background-color: #cc0000;
     }
 
     footer {
-      margin-top: 60px;
+      background-color: #0d0d0d;
       padding: 20px;
       text-align: center;
       border-top: 2px solid #ff4d4d;
       color: #999;
+      margin-top: 40px;
     }
 
     footer a {
       color: #ff4d4d;
       text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -279,44 +287,52 @@
         <p>A passionate Web Developer who loves turning ideas into beautiful and functional websites.</p>
       </div>
       <div class="hero-image">
-        <img src="vandana.jpg" alt="Vandana">
+        <img src="vandana.jpeg" alt="Vandana">
       </div>
     </div>
+    <!-- About Section -->
+<div id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-content">
+    <p>I'm Vandana, currently pursuing an Integrated M.Tech in Computer Science from NIET with a CGPA of 8.39. I have hands-on experience developing real-world applications using Spring Boot and MySQL. I interned at SCSIT, NIET where I built an automated document management system and contributed to a research publication. I'm passionate about solving real-life problems with elegant code.</p>
+  </div>
+</div>
+
 
     <!-- Projects Section -->
-    <div class="projects" id="projects">
-      <h2 class="section-title">My Projects</h2>
+    <div id="projects">
+      <h2 class="section-title">Projects</h2>
       <div class="project-container">
         <div class="project-card">
           <h3>Weather Forecasting App</h3>
-          <p>Created using HTML, CSS, and JavaScript, this app fetches weather data from an open API. It shows temperature, humidity, and conditions. Designed for responsiveness and smooth UI across screen sizes.</p>
+          <p>Created using HTML, CSS, and JavaScript, this app fetches weather data from an open API.</p>
         </div>
         <div class="project-card">
           <h3>Flight Scheduler</h3>
-          <p>A Spring Boot-based flight search app that fetches real-time data via APIs. Users can select routes and dates. Java, REST APIs, and MySQL were used to handle backend, validation, and error management.</p>
+          <p>A Spring Boot-based flight search app with Java, REST APIs, and MySQL for backend functionality.</p>
         </div>
         <div class="project-card">
           <h3>Hindi HTR System</h3>
-          <p>This project uses VGG16 with CTC loss to recognize handwritten Hindi words. It preprocesses word images and outputs predictions. Built using TensorFlow and Python with a custom-trained model for accuracy.</p>
+          <p>This project uses VGG16 with CTC loss to recognize handwritten Hindi words using TensorFlow.</p>
         </div>
       </div>
     </div>
 
     <!-- Services Section -->
-    <div class="services" id="services">
+    <div id="services">
       <h2 class="section-title">Services</h2>
       <div class="service-container">
         <div class="service-box">
           <h3>Web Developer</h3>
-          <p>I design responsive websites using HTML, CSS, JavaScript, and ReactJS. I also integrate robust backends with Spring Boot and manage relational databases like MySQL for end-to-end web application development.</p>
+          <p>I design responsive websites using HTML, CSS, JavaScript, ReactJS, Spring Boot, and MySQL.</p>
         </div>
         <div class="service-box">
           <h3>Java Developer</h3>
-          <p>I’ve been practicing Java regularly and strengthening my programming foundation through DSA. With solid object-oriented principles, I write clean, optimized code and develop scalable logic for backend systems.</p>
+          <p>Practicing Java & DSA regularly, I write clean, optimized code using object-oriented principles.</p>
         </div>
         <div class="service-box">
           <h3>Machine Learning</h3>
-          <p>Worked on machine learning models using real datasets. Built a Hindi handwritten recognition model using VGG16 and CTC loss. I enjoy combining Python with libraries like Pandas, NumPy, and TensorFlow.</p>
+          <p>Worked on ML models using real datasets, especially VGG16+CTC for handwritten text recognition.</p>
         </div>
       </div>
     </div>
@@ -356,8 +372,6 @@
       </p>
     </footer>
   </div>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
