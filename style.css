@@ -1,21 +1,27 @@
+/* General Body Styling */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #f9f9f9;
   color: #333;
 }
+
+/* Header Section */
 header {
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   padding: 50px 20px;
   text-align: center;
 }
+
 .profile-pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
+
+/* Navigation */
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -24,24 +30,52 @@ nav ul {
   padding: 10px 0;
   margin: 0;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   padding: 10px 20px;
 }
+
 nav a:hover {
   background: #555;
   border-radius: 4px;
 }
+
+nav ul li:first-child a {
+  font-weight: bold;
+  color: #ff85b3;
+}
+
+/* Hero Section Animation */
+.hero-section {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sections */
 section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
+
 section h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+
+/* Buttons */
 .btn {
   background: #fff;
   color: #333;
@@ -53,20 +87,57 @@ section h2 {
   font-weight: bold;
   transition: background 0.3s ease;
 }
+
 .btn:hover {
   background: #ddd;
 }
+
+/* Projects List */
+.projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.projects li {
+  flex: 1 1 250px;
+  max-width: 300px;
+  list-style: none;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Services List */
+#services ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+
+/* Contact Form */
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 input, textarea {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 button {
   padding: 10px;
   background: #764ba2;
@@ -77,28 +148,54 @@ button {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 button:hover {
   background: #5a3784;
 }
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
   background: #333;
   color: white;
 }
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
     padding: 10px;
   }
+
   .projects ul {
     flex-direction: column;
+    align-items: center;
   }
+
   section {
     padding: 20px 10px;
   }
+
   .btn {
     margin: 5px;
     width: 100%;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
