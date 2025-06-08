@@ -100,6 +100,22 @@ body {
     /* letter-spacing: 0.3em; Adjust letter spacing if necessary */
     animation: typing 3s steps(50, end);
 }
+#about {
+  background-color: #1a1a1a;
+  padding: 60px 20px;
+  border-top: 2px solid #ff4d4d;
+  border-bottom: 2px solid #ff4d4d;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #e0e0e0;
+  text-align: center;
+}
+
   
   @keyframes typing {
     from {
