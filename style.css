@@ -1,385 +1,91 @@
 body {
-    margin: 0;
-    padding: 0px;
-    font-family: Arial, sans-serif;
-    background-color: #1b1d1f;
-    color: #fff;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2%;
-    background-color: #1b1d1f;
-  }
-
-  .logo{
-    font-size: 2rem;
-    color: #309ab4;
-    font-weight: bolder;
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; /* Ensure the menu takes full height */
-    padding: 0px;
-    background-color: #1b1d1f;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu ul li {
-    display: inline;
-    margin-left: 25px;/* Adjust this value as needed */
-  }
-  
-  .menu ul li:first-child {
-    margin-left: auto; /* Pushes Vandana text to the right */
-  }
-  
-  .menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  .menu-icon{
-    display: none;
-  }
-  
-  .vandana-text {
-    color: pink;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 30px; /* Adjust this size as needed */
-    margin-left: 160px; /* Adjust this value as needed */
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 0px;
-    color: #fff;
-  }
-  
-  .intro h2 {
-    font-size: 90px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 0; /* Adjust or remove the margin-bottom as needed */
-  }
-  
-  .intro h3 {
-    font-size: 60px;
-    margin-top: 10px; /* Adjust or remove the margin-top as needed */
-    margin-bottom: 15px; /* You can adjust this margin-bottom as well */
-  }
-  .intro p{
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .intro .abc {
-    color: pink;
-    display: inline-flex;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0;
-    /* border-right: 0.15em solid orange; Adjust the border properties as needed */
-    /* letter-spacing: 0.3em; Adjust letter spacing if necessary */
-    animation: typing 3s steps(50, end);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
 }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-  
-  
-  .download-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #e94242e1;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-    margin-right: 2rem;
-  }
-  
-  .download-btn:hover {
-    background-color: #070606;
-  }
-  .talk:hover {
-    background-color: #070606;
-  }
-  .talk {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #e94242e1;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-  }
-  
-  .circle-image img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    justify-content: center; 
-    text-align: center;
-  }
-  
-  /* Styling for Home and About sections */
-  
-  #home {
-    background-color: #1b1d1f; /* Darker background for Home section */
-    padding: 80px;
-  }
-  /* Existing styles for other sections */
-  
-  .about-content h2 {
-    font-size: 70px;
-    text-align: center;
-    position: relative;
-    color: pink;
-  }
-  
-  .about-flex-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-  }
-  
-  .circle-image {
-    flex: 0 0 200px;
-    margin-right: 20px;
-  }
-  
-  .circle-image img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    justify-content: center; 
-    text-align: center;
-  }
-  
-  .about-text {
-    flex: 1;
-    max-width: 600px; /* Adjust the maximum width as needed */
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-  }
-  .about-text p{
-    font-size: 1.2rem;
-  }
-  /* Your existing styles */
-  
-  /* New styles for Projects Section */
-  #projects {
-    background-color: #1b1d1f; /* Adjust background color as needed */
-    padding: 80px;
-    text-align: center;
-    width: 100%; /* Set the width to take up the full width of the container */
-    box-sizing: border-box;
-    overflow: auto; /* Ensure no overflow issues */
-  }
-  
-  .projects h2 {
-    font-size: 70px;
-    color: pink; /* Adjust color as needed */
-  }
-  
-  .project-box {
-    display: inline-block; /* Display boxes in a single line */
-    width: 300px; /* Adjust width as needed */
-    height: 300px; /* Adjust height as needed */
-    margin: 20px; /* Adjust margin as needed */
-    background-color: #222; /* Adjust background color as needed */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid pink; /* Pink border */
-    box-sizing: border-box;
-    
-  }
-  .project-box:hover{
-    background-color: pink;
-    color: black;
-    cursor: pointer;
-  }
-  
-  .project-box h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .project-box p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  #services {
-    background-color: #1b1d1f;
-    padding: 60px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: auto;
-  }
-  
-  .services h2 {
-    font-size: 60px;
-    color: pink;
-    margin-bottom: 50px; 
-  }
-  
-  .service-box1,
-  .service-box2,
-  .service-box3 {
-    display: inline-block;
-    width: 300px;
-    height: 300px;
-    margin: 20px  ; 
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid pink;
-    box-sizing: border-box;
-  }
-  .service-box1:hover,
-  .service-box2:hover,
-  .service-box3:hover{
-    background-color: pink;
-    color: black;
-    cursor: pointer;
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #333;
+  padding: 10px 0;
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+nav a:hover {
+  background: #555;
+}
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.btn {
+  background: #fff;
+  color: #333;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #ddd;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  padding: 10px;
+  background: #764ba2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background: #5a3784;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
 
-  }
-  
-  /* .service-container{
-    display: flex;
-  } */
-  .service-container h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .service-container p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  /* Add this styling to your existing CSS file */
-  
-  #contact {
-    background-color: #1b1d1f;
-    padding: 80px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: auto;
-  }
-  
-  #contact h2 {
-    font-size: 60px;
-    color: pink;
-    margin-bottom: 50px;
-  }
-  
-  #contactForm {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  #contactForm label {
-    display: block;
-    margin-bottom: 10px;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  
-  #contactForm input,
-  #contactForm textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background-color: #1b1d1f;
-    color: #fff;
-  }
-  
-  #contactForm button {
-    background-color: #e94242e1;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #contactForm button:hover {
-    background-color: #070606;
-  }
-  footer {
-    text-align: center;
-    padding: 3px;
-    background-color: #2f3337;
-    color: white;
-  }
-  footer a{
-    color: white;
-    text-decoration: none;
-    
-  }
-  footer a:hover{
-    color: pink;
-  } 
-  @media screen and (max-width: 768px) {
-    .menu ul {
-      display: none;
-      flex-direction: column;
-      background-color: #1b1d1f;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-    }
-  
-    .menu li {
-      text-align: center;
-      margin: 10px 0;
-    }
-  
-    /* .menu-icon {
-      display: block;
-    } */
-  
-    #menu-toggle {
-      display: none;
-    }
-  
-    #menu-toggle:checked + .menu ul {
-      display: flex;
-    }
-  }
+// script.js
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Thank you for reaching out! I will get back to you soon.");
+});
